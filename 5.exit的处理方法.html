@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script src="./lib/d3.js"></script>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        var dataset = [3, 6, 9];
+        var p = d3.select('body').selectAll('p');
+
+        var updata = p.data(dataset)
+        var exit = updata.exit();
+        
+        updata.text(function(d) {
+            return d
+        })
+
+        exit.remove();
+    </script>
+</body>
+</html>

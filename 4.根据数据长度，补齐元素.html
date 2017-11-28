@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/d3.js"></script>
+</head>
+
+<body>
+    <script>
+        var dataset = [3, 6, 9];
+
+        var body = d3.select('body');
+
+        body.selectAll('p')
+            .data(dataset)
+            .enter()
+            .append('p')
+            .text(function (d) {
+                return d
+            })
+    </script>
+</body>
+
+</html>
